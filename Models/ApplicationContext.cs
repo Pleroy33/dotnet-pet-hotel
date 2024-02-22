@@ -17,11 +17,12 @@
 
     This class gets added to Entity during the system setup. See Startup.cs.
 */
-namespace pet_hotel.Models
+namespace Pet_Hotel.Models
 {
     public class ApplicationContext : DbContext
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) {}
         // public DbSet<MyClass> MyClassTable { get; set; }
+        public DbSet<PetOwner> PetOwners {get; set;}
     }
 }

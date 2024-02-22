@@ -16,6 +16,6 @@ namespace Pet_Hotel.Models
         [Required]
         public string emailAddress {get; set;}
 
-        public int petCount = 0;
+        public int petCount {get; set;}
     }
 }
