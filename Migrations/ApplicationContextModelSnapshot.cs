@@ -26,20 +26,18 @@ namespace pet_hotel.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<DateTime>("checkedInAt")
+                    b.Property<DateTime?>("checkedInAt")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("petBreed")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("petBreed")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("petColor")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("petColor")
+                        .HasColumnType("integer");
 
                     b.Property<int>("petOwnerId")
                         .HasColumnType("integer");
